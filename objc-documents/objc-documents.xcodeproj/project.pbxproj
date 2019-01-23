@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		111915B721F90FA900A8554F /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 111915B621F90FA900A8554F /* Document.m */; };
+		111915BA21F9104200A8554F /* NSString+WordCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 111915B921F9104200A8554F /* NSString+WordCount.m */; };
+		111915BD21F9114A00A8554F /* DocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 111915BC21F9114A00A8554F /* DocumentController.m */; };
 		1132D9E921F90DB30061E6E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1132D9E821F90DB30061E6E3 /* AppDelegate.m */; };
 		1132D9EF21F90DB30061E6E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1132D9ED21F90DB30061E6E3 /* Main.storyboard */; };
 		1132D9F121F90DB40061E6E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1132D9F021F90DB40061E6E3 /* Assets.xcassets */; };
@@ -17,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		111915B521F90FA900A8554F /* Document.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
+		111915B621F90FA900A8554F /* Document.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
+		111915B821F9104200A8554F /* NSString+WordCount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+WordCount.h"; sourceTree = "<group>"; };
+		111915B921F9104200A8554F /* NSString+WordCount.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+WordCount.m"; sourceTree = "<group>"; };
+		111915BB21F9114A00A8554F /* DocumentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DocumentController.h; sourceTree = "<group>"; };
+		111915BC21F9114A00A8554F /* DocumentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DocumentController.m; sourceTree = "<group>"; };
 		1132D9E421F90DB30061E6E3 /* objc-documents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "objc-documents.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1132D9E721F90DB30061E6E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1132D9E821F90DB30061E6E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -66,6 +75,12 @@
 				1132D9E721F90DB30061E6E3 /* AppDelegate.h */,
 				1132D9E821F90DB30061E6E3 /* AppDelegate.m */,
 				1132D9ED21F90DB30061E6E3 /* Main.storyboard */,
+				111915B821F9104200A8554F /* NSString+WordCount.h */,
+				111915B921F9104200A8554F /* NSString+WordCount.m */,
+				111915B521F90FA900A8554F /* Document.h */,
+				111915BB21F9114A00A8554F /* DocumentController.h */,
+				111915BC21F9114A00A8554F /* DocumentController.m */,
+				111915B621F90FA900A8554F /* Document.m */,
 				1132DA0021F90ED10061E6E3 /* NKTDetailVC.h */,
 				1132DA0121F90ED10061E6E3 /* NKTDetailVC.m */,
 				1132D9F021F90DB40061E6E3 /* Assets.xcassets */,
@@ -149,6 +164,9 @@
 				1132D9F721F90DB40061E6E3 /* main.m in Sources */,
 				1132DA0221F90ED10061E6E3 /* NKTDetailVC.m in Sources */,
 				1132D9FF21F90DF80061E6E3 /* NKTDocumentsTVC.m in Sources */,
+				111915BA21F9104200A8554F /* NSString+WordCount.m in Sources */,
+				111915B721F90FA900A8554F /* Document.m in Sources */,
+				111915BD21F9114A00A8554F /* DocumentController.m in Sources */,
 				1132D9E921F90DB30061E6E3 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
