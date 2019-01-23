@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DocumentController.h"
+#import "Document.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,7 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *countLabel;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 
-
+@property Document *document;
+@property DocumentController *documentController;
 
 @end
 

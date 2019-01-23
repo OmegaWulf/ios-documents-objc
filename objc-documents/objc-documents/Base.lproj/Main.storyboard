@@ -114,6 +114,7 @@
                     <connections>
                         <outlet property="countLabel" destination="eY9-si-Dgl" id="0nv-dm-w3g"/>
                         <outlet property="textField" destination="MB5-5W-Mdx" id="fY3-zG-lMa"/>
+                        <outlet property="textView" destination="zS1-yI-Cjr" id="nD8-gg-Qr9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vfo-br-EWd" userLabel="First Responder" sceneMemberID="firstResponder"/>

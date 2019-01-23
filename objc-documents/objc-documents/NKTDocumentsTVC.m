@@ -7,6 +7,8 @@
 //
 
 #import "NKTDocumentsTVC.h"
+#import "DocumentController.h"
+#import "NKTDetailVC.h"
 
 @interface NKTDocumentsTVC ()
 
@@ -14,45 +16,56 @@
 
 @implementation NKTDocumentsTVC
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    if(self)
+    {
+        _document = [[Document alloc] init];
+        _documentController = [[DocumentController alloc] init];
+    }
+    return self;
 }
+
+-(instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if(self)
+    {
+        _documentController = [[DocumentController alloc] init];
+    }
+    return self;
+}
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
+}
+
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return _documentController.documents.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    _document = _documentController.documents[indexPath.row];
+    cell.textLabel.text = _document.title;
+    cell.detailTextLabel.text = _document.text;
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+
+
 
 /*
 // Override to support editing the table view.
@@ -66,28 +79,29 @@
 }
 */
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    if ([[segue identifier] isEqualToString:@"toNewDoc"])
+    {
+        NKTDetailVC *detailVC;
+        detailVC.documentController = _documentController;
+    } else if([[segue identifier] isEqualToString:@"toDoc"])
+    {
+        
+        NKTDetailVC *detailVC;
+        detailVC.documentController = _documentController;
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        detailVC.document = self.documentController.documents[indexPath.row];
+        
+    }
+    
+    
 }
-*/
 
 @end
